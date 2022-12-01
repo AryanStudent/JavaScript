@@ -19,14 +19,29 @@ function getposts()
 
 function createPost(post,callback)
 {
-    
-    setTimeout(() => {
-        posts.push(post);
-        callback();
-    },2000);  //Here in this case as we can see while printing we cannot see post3 because it takes longer than get posts to execute
+    return promise((resolve,reject) => {
+        setTimeout(() => {
+            posts.push(post);
+            const error = false;
+            if(!error)
+            {
+                resolve();
+            }
+            else{
+                reject('Error: Something went wrong');
+            }
+        })
+    },2000)
+    //Here in this case as we can see while printing we cannot see post3 because it takes longer than get posts to execute
     //This is where we use callbacks
 }
 
 /*getposts();*/
 
-createPost({title: 'Post3', body: 'This is the body of post three'}, getposts);
+createPost({title: 'Post3', body: 'This is the body of post three'},)
+    .then(getposts);
+    try {
+        
+    } catch (error) {
+        
+    }(err => console.log(err));
