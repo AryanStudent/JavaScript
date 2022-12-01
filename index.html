@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const s = "Hello world";
+
+console.log(s.length);
+console.log(s.split('; '));
+
+function Person(firstName, lastName,dob)
+{
+    this.firstName=firstName;//setting to the properties of the object
+    this.lastName=lastName;
+    this.dob=new Date(dob); //I converted it to be date and time and not string anymore
+    this.getFullYear = function() {
+        return this.dob.getFullYear();
+    }
+    this.getFullName = function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}       
+//Instantiate Object
+const person1 = new Person('John' , 'Kennedy' , '04-02-1996');//here as you can see we just put date as string
+console.log(person1.getFullYear());
+console.log(person1.getFullName());
+</script>
+</html>
