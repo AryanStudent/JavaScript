@@ -15,7 +15,8 @@ const color = x > 10 ? 'red' :  'blue';
 console.log(color);
 
 //functions 
-const addnums = (num1 = 1, num2 = 2) => {
+//JavaScript having three ways to write any function 
+const addnums = (num1 = 1, num2 = 2) => { //arrow way of writing a function
     console.log(num1 + num2);
 }
 
