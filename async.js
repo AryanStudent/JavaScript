@@ -1,4 +1,5 @@
 //call backs are important 
+//calling one function in other is called Callbacks
 const posts = [
     {
         title: 'Post1', body: 'This is the body of post1'},
